@@ -1,0 +1,279 @@
+@font-face {
+    font-family: druk;
+    src: url(./Druk.ttf);
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: gilroy;
+}
+html, body{
+width: 100%;
+ height: 100%;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+#loader{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F1E4;
+    z-index: 9999;
+}
+#loader img{
+    height: 350px;
+}
+#navbar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    z-index: 999;
+}
+#navbar .btn{
+    padding: 0 32px;
+    height: 45px;
+    border: 1px solid #184DC4;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all ease 0.2s;
+    background-color: #ffffffc7;
+}
+#navbar .btn:hover{
+    background-color: #184DC4;
+}
+
+#navbar .btn h3{
+    font-weight: 500;
+    font-size: 20px;
+    color: #184DC4;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    transition: all ease 0.2s;
+}
+#navbar .btn:hover h3{
+    transform: translateY(-100%);
+    color: #F2F1E4;
+}
+#main{
+    position:absolute;
+    top: 85%;
+    width: 100%;
+    background-color: #F2F1E4;
+    overflow: hidden;
+}
+#page1{
+    position: relative;
+    height: 130vh;
+    width: 100%;
+    padding: 0 45px;
+    overflow: hidden;
+}
+#upper{
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #184DC4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #184DC4;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+#svgs{
+    position: relative;
+    height: fit-content;
+}
+#page1 #svg1{
+    width: 100%;
+}
+#svg2{
+    top: 0;
+    right: 27.8%;
+    position: absolute;
+}
+#imgs{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 90px;
+    overflow: hidden;
+    border-bottom: 1px solid #184DC4;
+}
+#imgs .elem{
+    position: relative;
+    height: 100%;
+    width: 31.7%;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+#imgs .elem:nth-child(1){
+    transform: translateY(20%);
+    background-image: url(https://back.pizzatoits.it/uploads/01_RUBINETTO_PIZZATO_21a214a07c.jpg?);
+}
+#imgs .elem:nth-child(2){
+    background-image: url(https://back.pizzatoits.it/uploads/46_b42e257950.jpg?);
+}
+#imgs .elem:nth-child(3){
+    transform: translateY(20%);
+    background-image: url(https://back.pizzatoits.it/uploads/04_04c5ae4bc0.jpg?);
+}
+#imgs .elem:nth-child(1):hover,#imgs .elem:nth-child(3):hover{
+    transform: translateY(0%);
+
+}
+#imgs  .over{
+    height: 100%;
+    width: 100%;
+    background-color: #184cc46a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+
+}
+#page1  #imgs .elem:hover .over{
+    opacity: 0;
+}
+#page2{
+    height: 60vh;
+    width: 100%;
+    padding: 60px 45px;
+}
+#page2 div{
+    overflow: hidden;
+}
+#page2 h1{
+    font-size: 46px;
+    font-weight: 500;
+    color: #184DC4;
+}
+.page{
+    position: relative;
+    height: 140vh;
+    width: 100%;
+}
+.top{
+    width: calc(100% - 90px);
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-top: 1px solid #184DC4;
+
+}
+.top h3{
+    font-weight: 500;
+    color: #184DC4;
+    font-size: 14px;
+}
+.slider{
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 280px;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}
+.slider h1{
+    font-size: 14vw;
+    display: inline-block;
+    animation-name: slide;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-right:20px;
+    font-family: druk;
+    text-transform: uppercase;
+    color: #184DC4;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+.video-container{
+    height: calc(100% - 330px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-container video{
+    height: 100%;
+    transform: scale(1.2);
+    margin-top: -100px;
+}
+
+#footer{
+    height: 55vh;
+    width: 100%;
+    padding: 0 45px;
+}
+#ft1{
+    height: 45vh;
+    width: 100%;
+    border-top: 1px solid #184DC4;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+#ft1 h4{
+    color: #184DC4;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#ft1 h2{
+    font-size: 45px;
+    color: #184DC4;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#ft2{
+    height: calc(100% - 45vh);
+    width: 100%;
+    border-top: 1px solid #184DC4;
+}
+#cursor{
+    height: 10px;
+    width: 10px;
+    background-color: #184DC4;
+    border-radius: 50px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 1px solid #184DC4;
+    pointer-events: none;
+}
